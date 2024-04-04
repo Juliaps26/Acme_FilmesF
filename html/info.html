@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
+
+
+<script src="../js/info.js" type="module" defer></script>
+<link rel="icon" href="../img/logo.png" type="image/x-icon">
+<script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Info Filme</title>
+
+    <!-- <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+
+                    colors: {
+                        principal: '',
+                        amarelo: '#F3CC4D'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'normal']
+                    },
+                    spacing: {
+                        oo: '180vh'
+                    }
+                }
+            }
+        }
+    </script> -->
+
+</head>
+
+<!-- Projeto Acme Filmes - Front End usando Framework Tailwind utilizando dados da API-->
+
+<body class="bg-zinc-600">
+
+    <header class="
+    w-full
+     h-28 
+      bg-black
+      flex 
+      justify-center 
+      items-center
+      ">
+
+
+        <div class="fixed">
+            <img class="h-20  " src="../img/logo.png" alt="Logo Acme Filmes">
+        </div>
+
+        <div class="
+        flex
+        flex-col
+        pl-[90%]
+        h-20
+       
+        ">
+    <!-- Perfil do usuario -->
+            <div class="fixed">
+                <img class="pl-[10px]" src="../img/perfil.png" alt="Imagem de Perfil">
+                <p class="text-white">Olá, Júlia!</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="
+        flex 
+        w-10
+
+        ">
+        <!-- Seta para voltar -->
+        <button class="w-10">
+            <a href="../html/inicio.html">
+                <img class="w-16"src="../img/seta-esquerda.png" alt="Voltar para tela inicial">
+            </a>
+            
+            
+        </button>
+
+        </div>
+        
+        <h1 id="titulo"></h1>
+        <img id="poster" src="" alt="">
+        <p id="sinopse"></p>
+        <h1 id="duracao"></h1>
+        <p id="lancamento"></p>
+        <p id="relancamento"></p>
+        <p id="valor"></p>
+       
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

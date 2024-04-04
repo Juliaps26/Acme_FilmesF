@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!-- OI -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <link rel="icon" href="../img/logo.png" type="image/x-icon">
+    <script src="../js/main.js" type="module" defer></script>
+
+    <title>Acme Filmes</title>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        principal: '',
+                        amarelo: '#F3CC4D'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'normal']
+                    },
+                    spacing: {
+                        // Padronizando o tamanho das capas dos filmes 
+                        capaWidth: '250px',
+                        capaHeight: '350px'
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="bg-zinc-600">
+
+    <header class="h-28 bg-black">
+
+        <div class="flex justify-center pt-4">
+            <!-- Logo  -->
+            <div class="flex justify-center items-center relative pr-[700px] pl-[800px]">
+                <img class="" src="../img/logo.png" alt="Logo Acme Filmes">
+            </div>
+
+            <!-- Perfil do usuario  -->
+            <div class="flex justify-end items-end flex-col">
+                <a class=" flex bg-red justify-end  " href="../html/login.html"><img class="" src="../img/perfil.png"
+                        alt="perfil"></a>
+                <p class="text-white text-center">Olá, Júlia!</p>
+            </div>
+        </div>
+
+
+    </header>
+
+
+        <!-- Lupa de pesquisa de filmes -->
+        <div class=" flex justify-end pr-10 gap-4 mt-6">
+            <input class="rounded-lg border-2 border-black-600" type="text" placeholder="Pesquise um filme aqui...">
+            <img class="h-8" src="../img/lupa.png" alt="Icon de Lupa">
+        </div>
+
+
+        <!--  Card dos filmes -->
+        <main class="flex flex-row align-center justify-center w-full h-full p-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8" id="lista">
+    
+            </div>
+        </main>
+
+    <footer></footer>
+
+</body>
+
+</html>
