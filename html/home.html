@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Logo acme filmes na pagina -->
+    <link rel="icon" href="../img/1.png" type="image/x-icon">
+
+    <!-- Scripts -->
+    <script src="../js/home.js" type="module" defer></script>
+    <script src="../js/main.js" type="module" defer></script>
+    <!-- Configurações padronizadas -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    
+                    colors: {
+                        principal: '#2E1012',
+                        amarelo: '#F3CC4D'
+                    },
+                    fontFamily: {
+                        inter: ['Indie Flower', 'cursive']    
+                    },
+                    spacing: {
+                        // Padronizando o tamanho das capas dos filmes 
+                        capaWidth: '250px',
+                        capaHeight: '350px'
+                    }
+                  
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-zinc-600">
+
+    <!-- Comeco do site  -->
+    <header class="">
+
+        <div class="flex ml-10">
+
+
+            <!-- Filtros  -->
+            <div class="flex justify-start pt-4 gap-6">
+           <a class="w-20 h-10 text-white text-center rounded-xl text-lg hover:scale-110 duration-300" href="">Filmes</a>
+            <a class="w-20 h-10 text-white text-center rounded-xl text-lg hover:scale-110 duration-300" href="">Atores</a>
+            <a class="w-20 h-10 text-white text-center rounded-xl text-lg hover:scale-110 duration-300" href="">Diretores</a>
+
+            </div>
+            
+    
+            <!-- Logo  -->
+            <div class="flex h-22 ml-[510px] pt-2">
+                <img class="background-transparemt" src="../img/logo.png" alt="Logo Acme Filmes">
+            </div>
+
+
+<!-- Filme em destaque -->
+    <div id="app" class=" absolute inset-0 -z-20 flex items-center justify-center h-screen ">
+        <div id="background" class="absolute inset-0 w-full overflow-hidden opacity-45">
+
+        </div>
+        <div class=" absolute text-center">
+            <h1 class="text-4xl font-bold absolute items-center">Seu Conteúdo Aqui</h1>
+            <p class="mt-4">Filme Barbie</p>
+     
+        </div>
+
+
+    </div>
+
+    <!-- Direcionar ao trailer -->
+    <div class="absolute  mt-[70vh] items-center">
+<a class="w-60 flex grid items-center h-[5vh] bg-red-600 text-white text-center rounded-xl text-lg hover:scale-110 duration-300" href="https://www.youtube.com/watch?v=Ujs1Ud7k49M&pp=ygUOdHJhaWxlciBiYXJiaWU%3D">Assistir</a>
+    </div>
+
+
+
+    </header>
+
+     <!--  Card dos filmes -->
+     <main class="flex flex-row mt-[75vh] align-center justify-center w-full h-full p-4">
+        
+    
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="lista">
+
+        </div>
+    </main>
+
+
+
+    
+</body>
+</html>

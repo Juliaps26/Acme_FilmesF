@@ -10,30 +10,32 @@
 
 
 <script src="../js/info.js" type="module" defer></script>
-<link rel="icon" href="../img/logo.png" type="image/x-icon">
+<link rel="icon" href="../img/1.png" type="image/x-icon">
 <script src="https://cdn.tailwindcss.com"></script>
 
     <title>Info Filme</title>
 
-    <!-- <script>
+    <!--  Padronizando  -->
+    <script>
         tailwind.config = {
             theme: {
                 extend: {
-
-                    colors: {
-                        principal: '',
-                        amarelo: '#F3CC4D'
-                    },
+                
                     fontFamily: {
-                        inter: ['Inter', 'normal']
+                        inter: ['Indie Flower', 'cursive']    
                     },
                     spacing: {
-                        oo: '180vh'
+                        // Padronizando o tamanho das capas dos filmes 
+                        capaWidth: '45vh',
+                        capaHeight: '60vh',
+                        gap: '8vh',
+                        margin: '5vh'
                     }
+                  
                 }
             }
         }
-    </script> -->
+    </script>
 
 </head>
 
@@ -79,7 +81,7 @@
         ">
         <!-- Seta para voltar -->
         <button class="w-10">
-            <a href="../html/inicio.html">
+            <a href="./home.html">
                 <img class="w-16"src="../img/seta-esquerda.png" alt="Voltar para tela inicial">
             </a>
             
@@ -88,13 +90,23 @@
 
         </div>
         
-        <h1 id="titulo"></h1>
-        <img id="poster" src="" alt="">
-        <p id="sinopse"></p>
-        <h1 id="duracao"></h1>
+
+        <!-- Descricao dos filmes  -->
+        <div class="flex">
+
+            <h1 id="titulo"></h1>
+        <img id="capa" src="" alt="">
+
+
+        <p class="" id="sinopse"></p>
+
+
+        <!-- <h1 id="duracao"></h1>
         <p id="lancamento"></p>
         <p id="relancamento"></p>
-        <p id="valor"></p>
+        <p id="valor"></p> -->
+        </div>
+        
        
 
     </main>
