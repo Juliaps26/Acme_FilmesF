@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Logo acme filmes na pagina -->
+    <link rel="icon" href="../img/1.png" type="image/x-icon">
+
+    <!-- Js para listar todos os filmes -->
+    <script src="../js/lista.js" type="module" defer></script>
+    <title>Filmes</title>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    
+                    colors: {
+                        principal: '#2E1012',
+                        amarelo: '#F3CC4D'
+                    },
+                    fontFamily: {
+                        inter: ['Indie Flower', 'cursive']    
+                    },
+                    spacing: {
+                        // Padronizando o tamanho das capas dos filmes 
+                        capaWidth: '250px',
+                        capaHeight: '350px'
+                    }
+                  
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-zinc-600">
+    <header></header>
+
+    <!--  Card dos filmes -->
+    <main class="flex flex-row mt-[5vh] align-center justify-center w-full h-full p-4">
+        
+    
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="lista">
+
+        </div>
+    </main>
+    
+</body>
+</html>
