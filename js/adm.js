@@ -1,8 +1,6 @@
 'use strict'
 
-// document.getElementById('background').style.backgroundImage = "url('../img/barbiecapa.png')";
-
-
+// Imagem de fundo
 const imagePath = '../img/cinema1.webp';
 
         // Selecionar o elemento de fundo
@@ -19,3 +17,17 @@ const imagePath = '../img/cinema1.webp';
         backgroundElement.style.backgroundSize = 'cover';
         backgroundElement.style.backgroundPosition = 'center';
       
+// Login cms
+
+const botao=document.getElementById('btn')
+
+function logar(){
+    const email=document.getElementById('email').value
+    const senha=document.getElementById('senha').value
+    if(senha=='admin'&&email=='admin')
+        window.location.href='../html/cms.html'
+    else
+        alert('Usuário ou senha incorretos.')
+}
+
+botao.addEventListener('click', logar)

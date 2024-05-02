@@ -18,7 +18,7 @@ export async function getFilmeByID(id){
 
 // Publicar filme novo - post
 export async function postFilme(filme){
-    const url = 'http://10.107.134.40:8080/v2/acmefilmes/filmes'
+    const url = 'http://localhost:8080/v2/acmefilmes/filme'
     //JSON
     const_options = {
         method: 'POST',
@@ -34,10 +34,10 @@ export async function postFilme(filme){
  
 // Excluir um filme
 export async function deleteFilme(id){
-    const url = `http://10.107.134.40:8080/v2/acmefilmes/filme/${id}`
-    const options = {
-        method: 'DELETE'
+    const url=`http://localhost:8080/v2/acmefilmes/deletefilme/${id}`
+    const options={
+        method:'DELETE'
     }
-    const response = await fetch(url, options)
+    const response=await fetch(url,options)
     return response.ok
 }

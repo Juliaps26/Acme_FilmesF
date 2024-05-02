@@ -18,4 +18,6 @@ const imagePath = '../img/fundofilmes.webp';
         backgroundElement.style.backgroundRepeat = 'no-repeat';
         backgroundElement.style.backgroundSize = 'cover';
         backgroundElement.style.backgroundPosition = 'center';
-      
+
+
+        // Login usuario 
