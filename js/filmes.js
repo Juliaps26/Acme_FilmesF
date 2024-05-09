@@ -16,6 +16,18 @@ export async function getFilmeByID(id){
 }
 
 
+
+// Pesquisar por nome
+export async function getFilmeByNome(nome){
+    let url=`http://localhost:8080/v2/acmefilmes/filme/nome`
+    const response=await fetch(url)
+    const data=await response.json()
+    return data.filme[0]
+}
+
+
+
+
 // Publicar filme novo - post
 export async function postFilme(filme){
     const url = 'http://localhost:8080/v2/acmefilmes/filme'

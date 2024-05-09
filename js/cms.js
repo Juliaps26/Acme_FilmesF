@@ -4,12 +4,11 @@ import { getFilmes, deleteFilme, postFilme } from "./filmes.js"
 
 function criarTr(filme){
     const tr=document.createElement('tr')
-    tr.classList.add('bg-white', 'border-b', 'dark:bg-gray-800', 'dark:border-gray-700')
+    tr.classList.add('bg-white', 'dark:bg-gray-800', 'dark:border-gray-700')
 
     const foto_capa_td=document.createElement('td')
-    foto_capa_td.classList.add('px-6', 'py-4', 'bg-white')
+    foto_capa_td.classList.add('p-4', 'bg-wite')
     const foto_capa=document.createElement('img')
-    foto_capa.classList.add('h-posterh', 'w-posterw')
     foto_capa.src=filme.foto_capa
 
 
@@ -19,7 +18,7 @@ function criarTr(filme){
     titulo.textContent=filme.nome
 
     const sinopse=document.createElement('td')
-    sinopse.classList.add('px-6', 'py-4', 'bg-white', 'max-w-sinopsemaxw')
+    sinopse.classList.add('px-6', 'py-4', 'bg-white')
     sinopse.textContent=filme.sinopse
 
     const duracao=document.createElement('td')
@@ -28,30 +27,39 @@ function criarTr(filme){
     duracao.textContent=duracao_exemplo.substring(11, 19)
     
     const data_lancamento=document.createElement('td')
-    data_lancamento.classList.add('px-6', 'py-4', 'bg-white', 'max-w-sinopsemaxw')
+    data_lancamento.classList.add('px-6', 'py-4', 'bg-white')
     const data_lancamento_exemplo=filme.data_lancamento
     data_lancamento.textContent=data_lancamento_exemplo.substring(0, 10)
 
+    // Criando novo elemento
     const data_relancamento=document.createElement('td')
     data_relancamento.classList.add('px-6', 'py-4', 'bg-gray-50', 'dark:bg-gray-800')
+    // Verifica se a data de relancamento é nulo, exibindo uma mensagem
     if(filme.data_relancamento==null)
-        data_relancamento.textContent='Este filme não possui data de relançamento.'
+        data_relancamento.textContent='Não há data de relançamento'
     else{
         const data_relancamento_exemplo=filme.data_relancamento
+        // Simplificando a exibicao da data na tela 
         data_relancamento.textContent=data_relancamento_exemplo.substring(0, 10)
     }
 
    
-
+// Criando outro elemento para guardar o valor do filme
     const valor=document.createElement('td')
     valor.classList.add('px-6', 'py-4', 'bg-gray-50', 'dark:bg-gray-800')
-    valor.textContent=filme.valor_unitario
+//  Simplificando o valor unitario do filme 
+    const valorSimplificado = filme.valor_unitario.toFixed(2);
+    valor.textContent = valorSimplificado;
 
+
+//  Guardando o id do filme 
     const id=filme.id
+    // Criando elemento 
     const deletar=document.createElement('td')
     deletar.classList.add('px-6', 'py-4', 'bg-white')
     const deletarImg=document.createElement('img')
     deletarImg.classList.add('h-deletarh', 'w-deletarw')
+    // Imagem de excluir
     deletarImg.src='../img/excluir.png'
     const deletarBtn=document.createElement('button')
     deletarBtn.id=id

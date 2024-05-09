@@ -19,3 +19,6 @@ const imagePath = '../img/barbiecapa.png';
         backgroundElement.style.backgroundSize = 'cover';
         backgroundElement.style.backgroundPosition = 'center';
         backgroundElement.style.height = `${desiredHeight}px`;
+
+
+        

@@ -1,18 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <title>Administrador</title>
 </head>
-<body>
 
-    <header>
-        
+<body class="bg-black">
+
+    <header class="flex text-white p-2">
+
+        <div class="flex ">
+            <!-- Logo  -->
+            <div class="flex">
+                <img class="ml-[96vh]" src="../img/1.png" alt="Logo Acme Filmes">
+            </div>
+        </div>
     </header>
 
-    <main></main>
+    <button class="ml-6">
+        <a href="../html/loginadm.html">
+            <img class="w-[3vh]" src="../img/voltar-branco.png" alt="">
+        </a>
+    </button>
+
+    <main class="justify-center align-center flex mt-60">
+
+        <div class="flex justify-between space-x-4">
+            <section class="flex items-center justify-center">
+                <div id="app" class="absolute inset-0 -z-20 flex items-center justify-center h-screen">
+                    <div id="background" class="absolute inset-0 w-full overflow-hidden opacity-45"></div>
+                </div>
+                <!-- Caixa -->
+                <div
+                    class="bg-gradient-to-b hover:bg-orange-700 from-neutral-400/80 to-neutral-300/60 rounded-2xl shadow-lg max-w-3x2 p-10 items-center">
+                    <!-- area -->
+
+                    <button class="transform transition-all duration-300 hover:scale-110">
+                        <a class="block w-full h-full" href="../html/cms.html"> 
+                            <span>
+                                Filmes
+                            </span>
+                            <div class=" md:px-[6vh] md:h-[10vh]">
+                                <img class="w-20 flex" src="../img/claquete.png" alt="">
+    
+                            </div>
+                             
+                        </a>
+                   
+
+                    </button>
+
+                </div>
+            </section>
+
+            <section class="flex items-center justify-center">
+                <div id="app" class="absolute inset-0 -z-20 flex items-center justify-center h-screen">
+                    <div id="background" class="absolute inset-0 w-full overflow-hidden opacity-45"></div>
+                </div>
+                <!-- Caixa  -->
+                <div
+                    class="bg-gradient-to-b hover:bg-orange-700 from-neutral-400/80 to-neutral-300/60 rounded-2xl shadow-lg max-w-3x1 p-10 items-center">
+                    <!-- area -->
+                    <button class="transform transition-all duration-300 hover:scale-110">
+                        <a href="">Genero</a>
+                        <div class="md:w-3/10 px-60 md:px-[6vh] md:h-[10vh]">
+                       <img class="w-20" src="../img/filme-de-televisao.png" alt="">
+                        </div>
+                    </button>
+                </div>
+            </section>
+
+            <section class="flex items-center justify-center">
+                <div id="app" class="absolute inset-0 -z-20 flex items-center justify-center h-screen">
+                    <div id="background" class="absolute inset-0 w-full overflow-hidden opacity-45"></div>
+                </div>
+                <!-- Caixa -->
+                <div
+                    class="bg-gradient-to-b hover:bg-orange-700 from-neutral-400/80 to-neutral-300/60 rounded-2xl shadow-lg max-w-3x2 p-10 items-center">
+                    <!-- area -->
+                    <button class="transform transition-all duration-300 hover:scale-110">
+                        <a href="../html/cmsatores.html">Atores</a>
+                        <div class="md:w-3/10 px-60 md:px-[6vh] md:h-[10vh]">
+                       <img class="w-20" src="../img/ator.png" alt="">
+                        </div>
+                    </button>
+
+
+                </div>
+            </section>
+
+            <section class="flex items-center justify-center">
+                <div id="app" class="absolute inset-0 -z-20 flex items-center justify-center h-screen">
+                    <div id="background" class="absolute inset-0 w-full overflow-hidden opacity-45"></div>
+                </div>
+                <!-- Caixa -->
+                <div class="bg-gradient-to-b hover:bg-orange-700 from-neutral-400/80 to-neutral-300/60 rounded-2xl shadow-lg max-w-3x2 p-10 items-center">
+                    <!-- area -->
+                    <button class="transform transition-all duration-300 hover:scale-110 ">
+                        <a href="">Diretores</a>
+                        <div class="md:w-3/10 px-60 md:px-[6vh] md:h-[10vh]">
+                            <img class="w-20" src="../img/diretor.png" alt="">
+                        </div>
+                    </button>
+                </div>
+            </section>
+        </div>
+
+
+
+
+
+    </main>
 
     <footer></footer>
 </body>
+
 </html>
