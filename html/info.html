@@ -27,7 +27,7 @@
                     spacing: {
                         // Padronizando o tamanho das capas dos filmes 
                         capaWidth: '45vh',
-                        capaHeight: '60vh',
+                        capaHeight: '65vh',
                         gap: '8vh',
                         margin: '5vh'
                     }
@@ -64,29 +64,26 @@
         h-20
        
         ">
-    <!-- Perfil do usuario -->
-            <div class="fixed">
-                <img class="pl-[10px]" src="../img/perfil.png" alt="Imagem de Perfil">
-                <p class="text-white">Olá, Júlia!</p>
-            </div>
-        </div>
+    
     </header>
 
     <main>
 
         <div class="
         flex 
-        w-10
-
-        ">
+        w-10">
         <!-- Seta para voltar -->
-        <button class="w-10">
-            <a href="./home.html">
-                <img class="w-16"src="../img/seta-esquerda.png" alt="Voltar para tela inicial">
-            </a>
+
+        <div class="flex ml-10">
             
-            
-        </button>
+            <button class="w-20">
+                <a href="./home.html">
+                    <img class="h-16 pt-10" src="../img/voltar-branco.png" alt="">
+                </a>
+            </button>
+            <h1 class="pt-10 text-white text-4xl" id="titulo"></h1>
+        </div>
+     
 
         </div>
         
@@ -94,17 +91,29 @@
         <!-- Descricao dos filmes  -->
         <div class="flex">
 
-            <h1 id="titulo"></h1>
+           
         <img id="capa" src="" alt="">
 
 
-        <p class="" id="sinopse"></p>
+        <p class=" flex items-center justify-center ml-60" id="sinopse"></p>
 
+            <div>
+                
+            </div>
+            <div class="flex flex-col ml-60 justify-center text-white gap-y-">
+                <h1 id="duracao"></h1>
+                <p id="lancamento"></p>
+                <p id="relancamento"></p>
+                <p id="valor"></p>
+                <img id="classificacao" class="w-10" alt="">
+                <button id="btn">
 
-        <!-- <h1 id="duracao"></h1>
-        <p id="lancamento"></p>
-        <p id="relancamento"></p>
-        <p id="valor"></p> -->
+                </button>
+             
+                    
+             
+            </div>
+       
         </div>
         
        
