@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../src/output.css"> -->
 
 
-    <script type="module" src="../js/updatefilme.js"></script>
+    <script type="module" src="../js/novodiretor.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -26,7 +26,7 @@
           }
         }
       </script>
-    <title>Editar Filme</title>
+    <title>Cadastro</title>
 </head>
 <body class="bg-background -to-t from-clifford via-blue-700  to-red-700 h-screen">
     
@@ -46,41 +46,43 @@
         <div class="flex flex-col  gap-4  p-5 mt-5 rounded-lg">
 
             <div class="flex items-center gap-2">
-                <p class="text-white  text-3xl" >Nome do filme: </p>
+                <p class="text-white  text-3xl" >Nome do Diretor :</p>
                 <input type="text" class="outline-none p-3 w-96 rounded-[15px] bg-white text-black text-2xl" id="titulo">
             </div>
 
             <div class="flex items-center gap-4">
-                <p class="text-white  text-3xl" >Sinopse: </p>
+                <p class="text-white  text-3xl" >Biografia :</p>
                 <textarea name=""  cols="30" rows="3" class="w-96 outline-none rounded-[15px] bg-white text-black text-1xl" id="sinopse"></textarea>
             </div>
 
-            <div class="flex items-center gap-4">
-                <p class="text-white  text-3xl" >Duração: </p>
-                <input type="text" class="p-3 outline-none rounded-[15px] bg-white text-black text-2xl" id="duracao">
-            </div>
-
             <div class="flex items-center gap-2">
-                <p class="text-white  text-3xl" >Lançamento: </p>
+                <p class="text-white  text-3xl" >Data de Nascimento :</p>
                 <input type="date" class="p-3 outline-none rounded-[15px] bg-white text-black text-2xl" id="lancamento">
             </div>
 
             <div class="flex items-center gap-2">
-                <p class="text-white  text-3xl" >Relançamento: </p>
+                <p class="text-white  text-3xl" >Data de Falecimento :</p>
                 <input type="date" class="p-3 outline-none rounded-[15px] bg-white text-black text-2xl" id="relancamento">
             </div>
 
-            <div class="flex items-center gap-2">
-                <p class="text-white  text-3xl" >Valor: </p>
-                <input type="text" class="p-3 outline-none rounded-[15px] bg-white text-black text-2xl" id="valor">
-            </div>
 
             <div class="flex items-center gap-2">
-                <p class="text-white text-3xl" >Classificação: </p>
-                <input type="number" class="p-3 outline-none rounded-[15px]  bg-white text-black text-2xl" id="classificacao">
+                <p class="text-white text-3xl" > Sexo :</p>
+                <select class="p-3 outline-none rounded-[15px]  bg-white text-black text-2xl" id="sexo">
+                    <option disabled value=""> Selecione o sexo</option>
+                </select>
             </div>
 
-            <button class="p-3 border-4 mt-6 border-[#ffffFF] text-[#E13434] font-bold hover:bg-[#ECDDA2] hover:text-[#E13434] transition ease-in-out block rounded-full" id="cadastrar">Atualizar Filme</button>
+           
+
+            <div class="flex items-center gap-2">
+                <p class="text-white text-3xl" >Nacionalidades :</p>
+                <select class="p-3 outline-none rounded-[15px]  bg-white text-black text-2xl" id="classificacao">
+                    <option disabled value=""> Selecione as nacionalidades</option>
+                </select>
+            </div>
+
+            <button class="p-3 border-4 mt-6 border-[#ffffFF] text-[#E13434] font-bold hover:bg-[#ECDDA2] hover:text-[#E13434] transition ease-in-out block rounded-full" id="cadastrar">Cadastrar diretor</button>
         </div>
 
         <div class="" id="capaFilme">
@@ -92,9 +94,11 @@
                 <button id="button-preview-poster">Exibir Imagem</button>
             </div>
         </div>
+        
 
 
     </main>
+
 
 </body>
 </html>

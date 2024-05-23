@@ -46,3 +46,12 @@ export async function deleteDiretor(id){
     const response=await fetch(url,options)
     return response.ok
 }
+
+
+export async function getSexos(){
+    let url = ''
+    const response = await fetch(url)
+    const data = await response.json()
+    return data.sexo
+
+}

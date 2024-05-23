@@ -7,12 +7,27 @@ export async function getFilmes(){
     return data.filmes
 }
 
+
 // Buscar o filme pelo ID
 export async function getFilmeByID(id){
     let url=`http://localhost:8080/v2/acmefilmes/filme/${id}`
     const response=await fetch(url)
     const data=await response.json()
     return data.filme[0]
+}
+
+// Atualizar um filme
+export async function putFilme(filme, id){
+    const url= `http://localhost:8080/v2/acmeFilmes/updatefilme/${id}`
+    const options={
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(filme)
+    }
+    const response=await fetch(url,options)
+    return response.ok
 }
 
 

@@ -16,7 +16,7 @@ function criarCard(filme){
     const capa = document.createElement('img')
     capa.src = filme.foto_capa
     capa.classList.add('w-capaWidth', 'h-capaHeight', 'rounded-lg', 'shadow-lg', 'p-2', 'mb-2', 'transform', 'transition', 'hover:scale-[1.2]', 'duration-300', 'max-w-sm', 'mx-auto', 'cursor-pointer')
-    
+    capa.style.borderRadius = '2vh'
 
     // Quando clicar em um filme para aparecer as informações
     card.addEventListener('click', ()=>{

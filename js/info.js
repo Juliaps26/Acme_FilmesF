@@ -15,6 +15,7 @@ function preencherCampos(infoFilme){
     const capa = document.getElementById('capa')
     capa.src = infoFilme.foto_capa
     capa.classList.add( 'w-capaWidth', 'h-capaHeight', 'ml-gap', 'mt-margin')
+    capa.style.borderRadius = '2vh'
 
 
     const sinopse = document.getElementById('sinopse')
@@ -23,14 +24,17 @@ function preencherCampos(infoFilme){
 
     const duracao = document.getElementById('duracao')
     duracao.textContent="Duração: "+ tratarDuracao(infoFilme.duracao)
+    duracao.style.color = "red";
 
-
+    
 
     const lancamento = document.getElementById('lancamento')
     lancamento.textContent = "Lançamento: "+ tratarData(infoFilme.data_lancamento)
+    lancamento.style.color = "red";
 
 
     const relancamento = document.getElementById('relancamento')
+    relancamento.style.color = "red";
     relancamento.textContent =infoFilme.data_relancamento
     if(infoFilme.relancamento){
         relancamento.textContent = "Relançamento: "+tratarData(infoFilme.data_relancamento)
@@ -41,7 +45,8 @@ function preencherCampos(infoFilme){
       
     
     const valor = document.getElementById('valor')
-    valor.textContent=' ALUGAR POR R$ '+infoFilme.valor_unitario
+    valor.textContent=' Por apenas R$ '+infoFilme.valor_unitario
+    valor.style.color = '.verde'
 
     const classificacao = document.getElementById('classificacao')
     classificacao.src = infoFilme.classificacao[0].icon

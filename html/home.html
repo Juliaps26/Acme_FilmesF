@@ -8,6 +8,13 @@
     <!-- Logo acme filmes na pagina -->
     <link rel="icon" href="../img/1.png" type="image/x-icon">
 
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;700&display=swap" rel="stylesheet">
+   
+
+
     <!-- Scripts -->
     <script src="../js/home.js" type="module" defer></script>
     <script src="../js/main.js" type="module" defer></script>
@@ -19,10 +26,13 @@
                     
                     colors: {
                         principal: '#2E1012',
-                        amarelo: '#F3CC4D'
+                        amarelo: '#F3CC4D',
+                        fundo: '#000000'
                     },
                     fontFamily: {
-                        inter: ['Indie Flower', 'cursive']    
+                        inter: ['Indie Flower', 'cursive'],
+                        levic : ['Livvic', 'sans-serif']
+   
                     },
                     spacing: {
                         // Padronizando o tamanho das capas dos filmes 
@@ -35,7 +45,7 @@
         }
     </script>
 </head>
-<body class="bg-zinc-600">
+<body class="bg-fundo">
 
     <!-- Comeco do site  -->
     <header class="">
@@ -44,17 +54,17 @@
 
 
             <!-- Filtros  -->
-            <div class="flex justify-start pt-4 gap-6">
-           <a class="w-20 h-10 text-white text-center rounded-xl text-lg hover:scale-110 duration-300" href="../html/filmes.html">Filmes</a>
-            <a class="w-20 h-10 text-white text-center rounded-xl text-lg hover:scale-110 duration-300" href="../html/atores.html">Atores</a>
-            <a class="w-20 h-10 text-white text-center rounded-xl text-lg hover:scale-110 duration-300" href="../html/diretores.html">Diretores</a>
+            <div class="flex justify-start pt-4 gap-10">
+           <a class="w-20 h-10 text-white text-center rounded-xl text-lg hover:scale-110 font-levic font-bold duration-300" href="../html/filmes.html">Filmes</a>
+            <a class="w-20 h-10 text-white text-center rounded-xl text-lg font-levic font-bold hover:scale-110 duration-300" href="../html/atores.html">Atores</a>
+            <a class="w-20 h-10 text-white text-center rounded-xl text-lg  font-levic font-bold hover:scale-110 duration-300" href="">Diretores</a>
 
             </div>
             
     
             <!-- Logo  -->
             <div class="flex h-22 ml-[510px] pt-2">
-                <img class="background-transparemt" src="../img/logo.png" alt="Logo Acme Filmes">
+                <img class="background-transparemt" src="../img/logo-diferente.png" alt="Logo Acme Filmes">
             </div>
 
 
@@ -73,25 +83,27 @@
     </div>
 
     <!-- Direcionar ao trailer -->
-    <div class="absolute  mt-[70vh] items-center">
-<a class="w-60 flex grid items-center h-[5vh] bg-red-600 text-white text-center rounded-xl text-lg hover:scale-110 duration-300" href="https://www.youtube.com/watch?v=Ujs1Ud7k49M&pp=ygUOdHJhaWxlciBiYXJiaWU%3D">Assistir</a>
-    </div>
+    <button class="absolute mt-[70vh] items-center flex hover:scale-110 duration-300">
+        <img class="absolute left-5" src="../img/assistir.png" alt="">
+        <a class=" items-center w-60 flex grid items-center h-[5vh] bg-red-600 text-white font-levic font-bold text-center rounded-xl text-lg" href="https://www.youtube.com/watch?v=Ujs1Ud7k49M&pp=ygUOdHJhaWxlciBiYXJiaWU%3D">
+            ASSISTIR</a>
+    </button >
 
 
 
     </header>
 
      <!--  Card dos filmes -->
-     <main class="flex flex-col mt-[75vh] align-center justify-center w-full h-full p-4">
+     <main class="flex flex-col mt-[68vh] align-center justify-center w-full h-full ">
         
     
 
 <div class="w-full  h-10 flex items-center justify-center">
-    <input placeholder="Pesquise por nome" id="pesquisa" class=" outline-none px-4 w-1/5 h-4/5 rounded-md" type="text">
+    <!-- <input placeholder="Pesquise por nome" id="pesquisa" class=" outline-none px-4 w-1/5 h-4/5 rounded-md" type="text"> -->
 </div>
 
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="lista">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5" id="lista">
 
         </div>
     </main>

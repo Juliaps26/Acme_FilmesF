@@ -11,13 +11,13 @@ function criarCard(filme){
     // Retornar o nome do filme
     const titulo=document.createElement('h2')
     titulo.textContent=filme.nome
-    titulo.classList.add('font-inter', 'sans-serif','grid' ,'text-white', 'justify-center', 'text-lg')
+    titulo.classList.add('font-levic', 'font-bold','grid' ,'text-white', 'justify-center', 'text-lg')
 
     // Mostrar a capa dos filmes 
     const capa = document.createElement('img')
     capa.src = filme.foto_capa
-    capa.classList.add('w-capaWidth', 'h-capaHeight', 'rounded-lg', 'shadow-lg', 'p-2', 'mb-2', 'transform', 'transition', 'hover:scale-[1.2]', 'duration-300', 'max-w-sm', 'mx-auto', 'cursor-pointer')
-    
+    capa.classList.add('w-capaWidth', 'h-capaHeight','shadow-lg', 'p-2', 'mb-2', 'transform', 'transition', 'hover:scale-[1.2]', 'duration-300', 'max-w-sm', 'mx-auto', 'cursor-pointer')
+    capa.style.borderRadius = '2vh'
 
     // Quando clicar em um filme para aparecer as informações
     card.addEventListener('click', ()=>{
@@ -318,18 +318,18 @@ function criarModalDiretor(diretor) {
 
 
 
-pesquisa.addEventListener('keyup', async() => {
-    const nomeFilme = pesquisa.value
-if(nomeFilme != '' ) {
-    const filmesFiltrados = await getFilmebyNome(nomeFilme)
-    if(filmesFiltrados.status_code == 200) {
-        preencherContainer(filmesFiltrados)
+// pesquisa.addEventListener('keyup', async() => {
+//     const nomeFilme = pesquisa.value
+// if(nomeFilme != '' ) {
+//     const filmesFiltrados = await getFilmebyNome(nomeFilme)
+//     if(filmesFiltrados.status_code == 200) {
+//         preencherContainer(filmesFiltrados)
 
-    }
-} else {
-    adicionarTodosOsFilmes()
-}
-})
+//     }
+// } else {
+//     adicionarTodosOsFilmes()
+// }
+// })
 
 
 window.addEventListener('load', adicionarTodosOsFilmes)

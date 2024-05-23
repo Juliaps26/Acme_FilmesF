@@ -93,15 +93,17 @@ async function montarClassificacoes() {
 
 
 async function inserirFilme() {
-  
+
     const dadosFilme = pegarDados()
     console.log(dadosFilme)
 
     if (dadosFilme) {
         const retorno = await postFilme(dadosFilme)
         console.log(retorno)
-        if (retorno)
+        if (retorno) {
             btnCadastrar.textContent = 'FILME INSERIDO COM SUCESSO!'
+            window.location.href = '../html/cms.html'
+        }
         else
             btnCadastrar.textContent = 'HOUVE UM ERRO!'
     } else {

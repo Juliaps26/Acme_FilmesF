@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../img/icon.png">
+    <link rel="icon" href="../img/logo-principal.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -11,7 +11,8 @@
                 extend: {
                     colors: {
                         background:'#262626',
-                        btncolor:'#FE0000'
+                        btncolor:'#FE0000',
+                        headercolor : '#000000'
                     },
                     fontFamily: {
                         indie: ['Indie Flower', 'cursive']    
@@ -22,7 +23,6 @@
                     spacing:{
                         hdrpad:'10px',
                         mainh:'100%',
-                        bdyh:'100vh',
                         posterw:'150px',
                         posterh:'200px',
                         sinopsemaxw:'500px',
@@ -44,15 +44,39 @@
     <script src="../js/cmsdiretor.js" type="module" defer></script>
     <title>CMS</title>
 </head>
-<body class="bg-background h-bdyh">
-    <header class="flex justify-center text-white text-titulo p-hdrpad">
-        CMS DIRETORES
+<body class="bg-headercolor">
+
+
+    <header class="flex text-white p-2">
+        <button class="ml-6">
+            <a class="" href="../html/adm.html">
+                <img class="w-[3vh]" src="../img/voltar-branco.png" alt="">
+            </a>
+          </button>
+
+        <div class="flex ">
+            <!-- Logo  -->
+      <div class="flex pt-2">
+          <img class="ml-[96vh]" src="../img/logo-principal.png" alt="Logo Acme Filmes">
+      </div>
+      </div>
+
+      <!--  Botao para adcionar novo filme  -->
+      <div class=" flex ml-[70vh] p-6">
+           <button id="btn" class=" flex w-40 justify-center items-center h-12 text-black bg-white p-2 text-center rounded-md hover:scale-105 duration-300">
+            <a class="text-base font-bold"
+        href="../html/cadastrarDiretor.html">Novo Diretor</a>
+        <img class="h-6 w-8 pl-2" src="../img/botao-adicionar.png" alt="">
+    </button>
+      </div>
+
+      
     </header>
     
-    <main class="h-mainh flex justify-center">
-        <div class="overflow-x-auto">
-            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <main class="">
+        <div>
+            <table class="w-full text-sm">
+                <thead class= "text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
                         <th scope="col" class="px-6 py-3 ">
                             Nome

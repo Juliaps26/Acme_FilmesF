@@ -3,7 +3,7 @@
 // document.getElementById('background').style.backgroundImage = "url('../img/barbiecapa.png')";
 
 
-const imagePath = '../img/barbiecapa.png';
+const imagePath = '../img/capabarbie.png';
 
         // Selecionar o elemento de fundo
         const backgroundElement = document.getElementById('background');

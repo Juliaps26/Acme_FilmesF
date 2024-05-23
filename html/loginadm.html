@@ -8,19 +8,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;700&display=swap" rel="stylesheet">
+
     <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="icon" href="../img/logo.png" type="image/x-icon">
 
     <script src="../js/adm.js" type="module" defer></script>
 
-   
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        levic: ['Livvic', 'sans-serif']
+                    },
+                    colors: {
+                        fundo: '#000000',
+                        caixa: '#D9D9D9'
+                    }
+                }
+            }
+        }
+    </script>
+
+
 
     <title>Administrador</title>
 </head>
 
-<body class="bg-zinc-600">
+<body class="bg-fundo">
 
-   
+
 
     <main class="mt-40">
 
@@ -28,48 +49,53 @@
 
             <div id="app" class=" absolute inset-0 -z-20 flex items-center justify-center h-screen ">
                 <div id="background" class="absolute inset-0 w-full overflow-hidden opacity-45">
-        
+
                 </div>
             </div>
 
 
             <!-- Caixa para fazer login -->
-            <div class=" bg-gradient-to-b from-neutral-400/80 to-neutral-300/60 rounded-2xl shadow-lg max-w-3x2 p-10 items-center ">
+            <div class=" bg-caixa rounded-2xl shadow-lg max-w-3x2 p-10 items-center ">
 
 
                 <!-- area -->
                 <div class="md:w-3/10 px-60 md:px-[2vh] md:h-[40vh]">
 
                     <!-- Logo  -->
-            <div class="flex justify-center items-center relative">
-                <img class="" src="../img/logo.png" alt="Logo Acme Filmes">
-            </div>
-                  
+                    <div class="flex justify-center items-center relative">
+                        <img class="" src="../img/logo-diferente.png" alt="Logo Acme Filmes">
+                    </div>
+
 
 
                     <!--  Para digitar o email e senha para login -->
                     <form action="" class="flex flex-col gap-4">
-                        <input id="email" class="p-2 mt-4 rounded-xl border" type="email" name="email" placeholder="Email">
-                        <input id="senha" class="p-2 rounded-xl border" type="password" name="Senha" placeholder="Senha">
+                        <input id="email" class="p-2 mt-4 rounded-xl border font-levic font-bold  " type="email"
+                            name="email" placeholder="E-mail">
+                        <input id="senha" class="p-2 rounded-xl border font-levic font-bold" type="password"
+                            name="Senha" placeholder="Senha">
 
                         <!-- Botão para acessar a pagina inicial -->
-                        <button id="btn" type="button" class="bg-red-600 rounded-xl text-white py-2 hover:scale-105 duration-300">Entrar
-                            </button>
+                        <button id="btn" type="button"
+                            class="font-levic font-bold bg-red-600 rounded-xl text-white py-2 hover:scale-105 duration-300">Entrar
+                        </button>
                     </form>
 
                     <div class="mt-10 text-xs flex justify-between items-center text-[#002D74]">
-                        <p>Entre como</p>
-                    
+                        <p class="font-levic font-bold text-fundo">Entre como</p>
+
 
 
                         <a class="py-2 
                         px-5 
+                        font-levic 
+                        font-bold
                         bg-red-600
                         text-white 
                         rounded-xl 
                         hover:scale-110 
                         duration-300" href="../index.html">Usuario</a>
-                        
+
                     </div>
                 </div>
 

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link rel="stylesheet" href="../src/input.css">
+    <link rel="stylesheet" href="../src/output.css"> -->
+
+
+    <script type="module" src="../js/novogenero.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: { 
+              colors: {
+                background:'#262626'
+              },
+              spacing: {
+                // Padronizando o tamanho das capas dos filmes 
+                   capaWidth: '350px',
+                   capaHeight: '450px'
+              }
+            }
+          }
+        }
+      </script>
+    <title> Inserir novo Gênero</title>
+</head>
+<body class="bg-background -to-t from-clifford via-blue-700  to-red-700 h-screen">
+    
+    <header class="flex text-white p-2">
+        <div class="flex ">
+            <!-- Logo  -->
+      <div class="flex pt-2">
+          <img class="ml-[96vh]" src="../img/logo-principal.png" alt="Logo Acme Filmes">
+      </div>
+      </div>
+    </header>
+
+    <main class=" flex justify-center   items-center ">
+
+        <div class="flex  justify-around items-center" id="container">
+
+        <div class="flex flex-col  gap-4  p-5 mt-5 rounded-lg">
+
+            <div class="flex items-center gap-2">
+                <p class="text-white  text-3xl" >Nome do Gênero:</p>
+                <input type="text" class="outline-none p-3 w-96 rounded-[15px] bg-white text-black text-2xl" id="nome">
+            </div>
+
+
+        
+
+            <button class="p-3 border-4 mt-6 border-[#ffffFF] text-[#E13434] font-bold hover:bg-[#ECDDA2] hover:text-[#E13434] transition ease-in-out block rounded-full" id="cadastrar">Inserir Genero</button>
+        </div>
+
+
+        
+    </main>
+
+
+</body>
+</html>
