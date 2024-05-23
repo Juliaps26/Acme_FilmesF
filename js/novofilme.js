@@ -1,6 +1,6 @@
 
 'use strict'
-import { postFilme } from "./filmes.js"
+import { postFilme, getClassificacoes } from "./filmes.js"
 
 
 // Pegando o input que a pessoa vai digitar o link
@@ -11,10 +11,10 @@ const imgPosterPreview = document.getElementById('poster')
 imgPosterPreview.classList.add('w-capaWidth', 'h-capaHeight')
 
 // Id do botão que vai ser clicado para aparecer a imagem 
-const buttonPosterPreview = document.getElementById('button-preview-poster') 
+const buttonPosterPreview = document.getElementById('button-preview-poster')
 
 const mostrarPreview = () => {
-    const link = inputPosterPreview.value 
+    const link = inputPosterPreview.value
     imgPosterPreview.src = link
 
 }
@@ -22,44 +22,94 @@ const mostrarPreview = () => {
 buttonPosterPreview.addEventListener('click', mostrarPreview)
 
 
+//  Pegando o input 
+const inputClassificacao = document.getElementById('classificacao')
+const inputNome = document.getElementById('titulo')
+const inputSinopse = document.getElementById('sinopse')
+const inputDuracao = document.getElementById('duracao')
+const inputLancamento = document.getElementById('lancamento')
+const inputRelancamento = document.getElementById('relancamento')
+const inputValor = document.getElementById('valor')
 
-const btnCadastrar=document.getElementById('cadastrar')
 
-function pegarDados(){
-    const JSONFilme={}
-    const titulo=document.getElementById('titulo').value
-    JSONFilme.nome=titulo
-    const sinopse=document.getElementById('sinopse').value
-    JSONFilme.sinopse=sinopse
-    const duracao=document.getElementById('duracao').value
-    JSONFilme.duracao=duracao
-    const lancamento=document.getElementById('lancamento').value
-    JSONFilme.data_lancamento=lancamento
-    const relancamento=document.getElementById('relancamento').value
-    
-    const foto=document.getElementById('link').value
-    JSONFilme.foto_capa=foto
-    const valor=document.getElementById('valor').value
-    JSONFilme.valor_unitario=valor
-    const classificacao = document.getElementById('classificacao').value;
-    JSONFilme.id_classificacao=classificacao
-    if(relancamento==null||relancamento==undefined||relancamento=='')
-        return JSONFilme
-    else{
-        JSONFilme.data_relancamento=relancamento
+
+const btnCadastrar = document.getElementById('cadastrar')
+
+function pegarDados() {
+    let JSONFilme = {
+
+
+        nome: inputNome.value,
+        sinopse: inputSinopse.value,
+        duracao: inputDuracao.value,
+        data_lancamento: inputLancamento.value,
+        data_relancamento: '',
+        foto_capa: inputPosterPreview.value,
+        valor_unitario: inputValor.value,
+        id_classificacao: inputClassificacao.value
+
+
+
+    }
+
+
+    if (inputRelancamento.value != '') {
+        JSONFilme.data_relancamento = inputRelancamento.value
+    }
+
+    // Se  nao preencher 
+    if (inputNome.value == '' || inputSinopse.value == '' || inputDuracao.value == '' || inputLancamento.value == '' || inputValor.value == '' || inputPosterPreview.value == '') {
+        return false
+
+    } else {
         return JSONFilme
     }
+
+
 }
 
-async function inserirFilme(){
-    const dadosFilme=pegarDados()
+
+
+
+
+function criarOptionClassificacao(classificacao) {
+    const option = document.createElement('option')
+    option.textContent = classificacao.faixa_etaria
+    option.value = classificacao.id
+
+    return option
+
+}
+
+
+async function montarClassificacoes() {
+    const classificacoes = await getClassificacoes()
+    classificacoes.forEach((classificacao) => {
+        const optionClassificacao = criarOptionClassificacao(classificacao)
+        inputClassificacao.appendChild(optionClassificacao)
+    });
+
+}
+
+
+async function inserirFilme() {
+  
+    const dadosFilme = pegarDados()
     console.log(dadosFilme)
-    const retorno=await postFilme(dadosFilme)
-    console.log(retorno)
-    if(retorno)
-        btnCadastrar.textContent='FILME INSERIDO COM SUCESSO!'
-    else
-        btnCadastrar.textContent='HOUVE UM ERRO!'
+
+    if (dadosFilme) {
+        const retorno = await postFilme(dadosFilme)
+        console.log(retorno)
+        if (retorno)
+            btnCadastrar.textContent = 'FILME INSERIDO COM SUCESSO!'
+        else
+            btnCadastrar.textContent = 'HOUVE UM ERRO!'
+    } else {
+        alert('Preencha todos os campos!')
+    }
+
 }
 
 btnCadastrar.addEventListener('click', inserirFilme)
+
+window.addEventListener('load', montarClassificacoes)

@@ -3,29 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/icon.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Logo acme filmes na pagina -->
-    <link rel="icon" href="../img/1.png" type="image/x-icon">
-    <title>Diretores</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background:'#262626',
+                        btncolor:'#FE0000'
+                    },
+                    fontFamily: {
+                        indie: ['Indie Flower', 'cursive']    
+                    },
+                    fontSize:{
+                        titulo:'40px',
+                    },
+                    spacing:{
+                        hdrpad:'10px',
+                        mainh:'100%',
+                        bdyh:'100vh',
+                        posterw:'150px',
+                        posterh:'200px',
+                        sinopsemaxw:'500px',
+                        datarelancamentow:'200px',
+                        deletarh:'50px',
+                        deletarw:'50px',
+                    },
+                    backgroundImage:{
+                        img:"url('/img/background.svg')",
+                        hdivbg:"url('./img/SD_card_1920x1080px 1.svg')"
+                    },
+                    borderRadius:{
+                        btnr:'20px'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="../js/cmsdiretor.js" type="module" defer></script>
+    <title>CMS</title>
 </head>
-
-    <body class="bg-zinc-600">
-        <header>
-            
-            <div class="flex ml-80">
-                  <!-- Logo  -->
-            <div class="flex h-22 ml-[510px] pt-2">
-                <img class="" src="../img/1.png" alt="Logo Acme Filmes">
-            </div>
-            </div>
-          
-          
-        </header>
+<body class="bg-background h-bdyh">
+    <header class="flex justify-center text-white text-titulo p-hdrpad">
+        CMS DIRETORES
+    </header>
     
-        <main>
-            
-        </main>
-        
-    </body>
+    <main class="h-mainh flex justify-center">
+        <div class="overflow-x-auto">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 ">
+                            Nome
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Biografia
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Data de nascimento
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Data de falecimento
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Foto
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Sexo
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Nacionalidades
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Deletar
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Editar
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </main>
 
+</body>
 </html>

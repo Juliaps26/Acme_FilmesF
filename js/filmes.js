@@ -32,7 +32,7 @@ export async function getFilmeByNome(nome){
 export async function postFilme(filme){
     const url = 'http://localhost:8080/v2/acmefilmes/filme'
     //JSON
-    const_options = {
+    const options = {
         method: 'POST',
         headers: {
             'Content-type': 'application/json'
@@ -52,4 +52,12 @@ export async function deleteFilme(id){
     }
     const response=await fetch(url,options)
     return response.ok
+}
+
+
+export async function getClassificacoes(){
+    let url='http://localhost:8080/v2/acmefilmes/todas/classificacoes'
+    const response=await fetch(url)
+    const data=await response.json()
+    return data.classificacao
 }

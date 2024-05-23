@@ -46,38 +46,40 @@
         <div class="flex flex-col  gap-4  p-5 mt-5 rounded-lg">
 
             <div class="flex items-center gap-2">
-                <p class="text-white  text-3xl" >Nome do filme:</p>
+                <p class="text-white  text-3xl" >Nome do filme :</p>
                 <input type="text" class="outline-none p-3 w-96 rounded-[15px] bg-white text-black text-2xl" id="titulo">
             </div>
 
             <div class="flex items-center gap-4">
-                <p class="text-white  text-3xl" >Sinopse:</p>
+                <p class="text-white  text-3xl" >Sinopse :</p>
                 <textarea name=""  cols="30" rows="3" class="w-96 outline-none rounded-[15px] bg-white text-black text-1xl" id="sinopse"></textarea>
             </div>
 
             <div class="flex items-center gap-4">
-                <p class="text-white  text-3xl" >Duração:</p>
-                <input type="text" class="p-3 outline-none rounded-[15px] bg-white text-black text-2xl" id="duracao">
+                <p class="text-white  text-3xl" >Duração :</p>
+                <input type="time" class="p-3 outline-none rounded-[15px] bg-white text-black text-2xl" id="duracao">
             </div>
 
             <div class="flex items-center gap-2">
-                <p class="text-white  text-3xl" >Lançamento:</p>
+                <p class="text-white  text-3xl" >Lançamento :</p>
                 <input type="date" class="p-3 outline-none rounded-[15px] bg-white text-black text-2xl" id="lancamento">
             </div>
 
             <div class="flex items-center gap-2">
-                <p class="text-white  text-3xl" >Relançamento:</p>
+                <p class="text-white  text-3xl" >Relançamento :</p>
                 <input type="date" class="p-3 outline-none rounded-[15px] bg-white text-black text-2xl" id="relancamento">
             </div>
 
             <div class="flex items-center gap-2">
-                <p class="text-white  text-3xl" >Valor:</p>
+                <p class="text-white  text-3xl" >Valor :</p>
                 <input type="text" class="p-3 outline-none rounded-[15px] bg-white text-black text-2xl" id="valor">
             </div>
 
             <div class="flex items-center gap-2">
-                <p class="text-white text-3xl" >Classificação:</p>
-                <input type="number" class="p-3 outline-none rounded-[15px]  bg-white text-black text-2xl" id="classificacao">
+                <p class="text-white text-3xl" >Classificação :</p>
+                <select class="p-3 outline-none rounded-[15px]  bg-white text-black text-2xl" id="classificacao">
+                    <option disabled value=""> Selecione a classificacao</option>
+                </select>
             </div>
 
             <button class="p-3 border-4 mt-6 border-[#ffffFF] text-[#E13434] font-bold hover:bg-[#ECDDA2] hover:text-[#E13434] transition ease-in-out block rounded-full" id="cadastrar">CADASTRAR FILME</button>
